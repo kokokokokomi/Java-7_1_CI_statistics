@@ -1,12 +1,7 @@
 package ru.netology.statistic;
 
 public class StatisticsService {
-    /**
-     * Calculate index of max income
-     *
-     * @param incomes - array of incomes
-     * @return - index of first max value
-     */
+
     public long findMax(long[] incomes) {
         int index = 0;
         for (int i = 0; i < incomes.length; i++) {
@@ -14,5 +9,19 @@ public class StatisticsService {
         }
 
         return index;
+    }
+
+    public long findSum(long[] incomes) {
+        long sum = 0;
+        for (long income : incomes) {
+            sum += income;
+        }
+        return sum;
+    }
+
+    public long findAverageSales(long[] incomes) {
+        long sum = findSum(incomes);
+        long averageSales = sum / incomes.length;
+        return averageSales;
     }
 }
