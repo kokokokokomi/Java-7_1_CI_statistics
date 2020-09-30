@@ -5,7 +5,7 @@ public class StatisticsService {
     public long findMax(long[] incomes) {
         int index = 0;
         for (int i = 0; i < incomes.length; i++) {
-            index = incomes[i] > incomes[index] ? i : index;
+            index = incomes[i] >= incomes[index] ? i : index;
         }
 
         return index;
