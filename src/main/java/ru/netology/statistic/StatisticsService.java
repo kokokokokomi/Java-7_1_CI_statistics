@@ -15,4 +15,12 @@ public class StatisticsService {
                 current_max = income;
         return current_max;
     }
+
+    public long findSum(long[] incomes) {
+        long sum = 0;
+        for (long income : incomes) {
+            sum += income;
+        }
+        return sum;
+    }
 }
